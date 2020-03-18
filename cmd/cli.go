@@ -38,14 +38,14 @@ func main() {
 		// Print the current state
 		fmt.Printf("Count: %d\n", state.Counter)
 
-        // Scans a line from Stdin(Console)
-        scanner.Scan()
-        text := scanner.Text()
-        if len(text) != 0 {
-        	dispatch(strings.ToUpper(text))
-        } else {
-        	dispatch(/*rag.*/Exit)
-        }
+		// Scans a line from Stdin(Console)
+		scanner.Scan()
+		text := scanner.Text()
+		if len(text) != 0 {
+			dispatch(strings.ToUpper(text))
+		} else {
+			dispatch(/*rag.*/Exit)
+		}
 	}
 
 	rag.Runtime(init, update, view)
